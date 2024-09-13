@@ -1,0 +1,35 @@
+<mat-card class="example-card" appearance="outlined">
+    <mat-card-header>
+        <img src="../assets/e.jpg" mat-card-avatar alt="">
+        <!-- <mat-card-title  style="color: black">{{recipe.user.fullName}}</mat-card-title> -->
+        <mat-card-title  style="color: black">{{recipe.title}}</mat-card-title>
+
+         <!-- <mat-card-subtitle>{{recipe.title}}</mat-card-subtitle> -->
+    </mat-card-header>
+    <img mat-card-image class="max-h-[400px] object-cover" [src]="recipe.image" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <p  style="color: black;">
+        {{recipe.description}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <div>
+        <button mat-icon-button aria-label="Example icon button with a home icon">
+          <mat-icon  style="color: black;">favorite</mat-icon>
+        </button>
+        <button  (click)=" handleOpenEditRecipeForm()" mat-icon-button aria-label="Example icon button with a home icon">
+          <mat-icon  style="color: black;">edit</mat-icon>
+        </button>
+        <button mat-icon-button aria-label="Example icon button with a home icon">
+          <mat-icon  style="color: black;">share</mat-icon>
+        </button>
+      </div>
+      <div>
+        <button (click)="handleDeletedRecipe()" mat-icon-button aria-label="Example icon button with a home icon">
+          <mat-icon  style="color: black;">delete</mat-icon>
+        </button>
+       
+      </div>
+    </mat-card-actions>
+  </mat-card>
+  
